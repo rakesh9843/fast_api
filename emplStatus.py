@@ -3,7 +3,7 @@ import requests
 API_URL= 'https://fast-api-d4fg.onrender.com/predict-status'
 
 st.header("Employee Termination or Active Prediction using Logistic Regression.")
-st.subheader("hek")
+st.subheader("check it")
 
 st.sidebar.header(
     "Employee Status Prediction"
