@@ -79,7 +79,7 @@ if st.button("Predict Status"):
         
     }
     try:
-        response=requests.post(AP_URL,payload)
+        response=requests.post(API_URL,json=payload)
         if response.status_code==200:
             result = response.json()
 
