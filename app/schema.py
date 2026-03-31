@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 class EmployeesStatus(BaseModel):
     PerfScoreID:int
-    Salary: int
+    SalaryID: int
     PositionID:int
     EngagementSurvey: int
     EmpSatisfaction: float

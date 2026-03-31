@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
-API_URL= 'https://fast-api-d4fg.onrender.com/predict-status'
+
+# API_URL= 'https://fast-api-d4fg.onrender.com/predict-status/'
+API_URL = 'https://fast-api-d4fg.onrender.com/predict-status/'
 
 st.header("Employee Termination or Active Prediction using Logistic Regression.")
 st.subheader("check it")
@@ -76,8 +78,8 @@ if st.button("Predict Status"):
         "SpecialProjectsCount":SpecialProjectsCount,
         "DaysLateLast30":DaysLateLast30,
         "Absences":Absences
-        
     }
+    
     try:
         response=requests.post(API_URL,json=payload)
         if response.status_code==200:
