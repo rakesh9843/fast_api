@@ -19,7 +19,7 @@ PerfScoreID =st.sidebar.slider(
     step=1
 
 )
-SalaryID= st.sidebar.slider(
+Salary= st.sidebar.slider(
     "Salary",
     value=10000,
     min_value=1000,
@@ -71,7 +71,7 @@ Absences= st.sidebar.slider(
 if st.button("Predict Status"):
     payload={
         "PerfScoreID":PerfScoreID,
-        "SalaryID":SalaryID,
+        "Salary":Salary,
         "PositionID":PositionID,
         "EngagementSurvey":EngagementSurvey,
         "EmpSatisfaction":EmpSatisfaction,
@@ -79,7 +79,7 @@ if st.button("Predict Status"):
         "DaysLateLast30":DaysLateLast30,
         "Absences":Absences
     }
-    
+
     try:
         response=requests.post(API_URL,json=payload)
         if response.status_code==200:
